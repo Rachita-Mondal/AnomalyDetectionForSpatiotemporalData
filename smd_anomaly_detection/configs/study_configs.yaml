@@ -1,0 +1,112 @@
+auroc_fscore:
+  metric: ['au_roc', 'raw_f1']      # list of metrics
+  overwrite: True
+  directions: ['maximize', 'maximize']
+  sample_simplex: False
+  n_trials: 100
+  psi_min: 1.0e-4
+  psi_max: 2.0e+1
+  psi_log: True
+  lda_min: 1.0e-4
+  lda_max: 2.0e+1
+  lda_log: True
+  lda_gtv_min: 1.0e-7
+  lda_gtv_max: 1.0e-4
+  lda_gtv_log: True
+  search_rho: False
+au_roc:
+  metric: 'au_roc'
+  overwrite: True
+  direction: 'maximize'
+  sample_simplex: False
+  n_trials: 100
+  psi_min: 1.0e-4
+  psi_max: 2.0e+1
+  psi_log: True
+  lda_min: 1.0e-4
+  lda_max: 2.0e+1
+  lda_log: True
+  lda_gtv_min: 1.0e-7
+  lda_gtv_max: 1.0e-4
+  lda_gtv_log: True
+  search_rho: False
+gic_5:
+  metric: 'gic_5'
+  overwrite: True
+  direction: 'minimize'
+  sample_simplex: False
+  n_trials: 100
+  psi_min: 1.0e-4
+  psi_max: 2.0e+1
+  psi_log: True
+  lda_min: 1.0e-4
+  lda_max: 2.0e+1
+  lda_log: True
+  lda_gtv_min: 1.0e-7
+  lda_gtv_max: 1.0e-4
+  lda_gtv_log: True
+  search_rho: False
+gic_1:
+  metric: 'gic_1'
+  overwrite: True
+  direction: 'minimize'
+  sample_simplex: False
+  n_trials: 100
+  psi_min: 1.0e-4
+  psi_max: 2.0e+1
+  psi_log: True
+  lda_min: 1.0e-4
+  lda_max: 2.0e+1
+  lda_log: True
+  lda_gtv_min: 1.0e-7
+  lda_gtv_max: 1.0e-4
+  lda_gtv_log: True
+  search_rho: False
+gic_3:
+  metric: 'gic_3'
+  overwrite: True
+  direction: 'minimize'
+  sample_simplex: False
+  n_trials: 100
+  psi_min: 1.0e-4
+  psi_max: 2.0e+1
+  psi_log: True
+  lda_min: 1.0e-4
+  lda_max: 2.0e+1
+  lda_log: True
+  lda_gtv_min: 1.0e-7
+  lda_gtv_max: 1.0e-4
+  lda_gtv_log: True
+  search_rho: False
+dof:
+  metric: 'dof'
+  overwrite: True
+  direction: 'minimize'
+  sample_simplex: True
+  n_trials: 100
+  # psi_min: 1.0e-4
+  # psi_max: 2.0e+1
+  # psi_log: True
+  # lda_min: 1.0e-4
+  # lda_max: 2.0e+1
+  # lda_log: True
+  lda_gtv_min: 1.0e-7
+  lda_gtv_max: 1.0e-4
+  lda_gtv_log: True
+  search_rho: False
+gic_6:
+  metric: 'gic_6'
+  overwrite: True
+  direction: 'minimize'
+  sample_simplex: True
+  n_trials: 100
+  # psi_min: 1.0e-4
+  # psi_max: 2.0e+1
+  # psi_log: True
+  # lda_min: 1.0e-4
+  # lda_max: 2.0e+1
+  # lda_log: True
+  lda_gtv_min: 1.0e-7
+  lda_gtv_max: 1.0e-4
+  lda_gtv_log: True
+  search_rho: False

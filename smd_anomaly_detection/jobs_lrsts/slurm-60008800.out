@@ -1,0 +1,46 @@
+[I 2025-08-09 20:19:35,824] A new study created in memory with name: no-name-0b068536-5824-4ee3-b96b-13241ce97cc9
+Mode-0 approx rank: 5/38
+Estimated noise variance from mode-0: 0.0
+Mode-1 approx rank: 8/17
+Estimated noise variance from mode-1: 0.0009300248235586769
+Mode-2 approx rank: 12/24
+Estimated noise variance from mode-2: 0.0014775764633406323
+Mode-3 approx rank: 9/60
+Estimated noise variance from mode-3: 0.0005808202364600984
+  0%|          | 0/500 [00:00<?, ?it/s]                                         0%|          | 0/500 [00:01<?, ?it/s]                                         0%|          | 0/500 [00:01<?, ?it/s]  0%|          | 0/500 [00:01<?, ?it/s]
+[W 2025-08-09 20:19:37,295] Trial 0 failed with parameters: {'psi': 0.017242444786220834, 'lda_t': 2.0067059262834313e-08} because of the following error: RuntimeError('CUDA error: invalid device ordinal\nCUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.\nFor debugging consider passing CUDA_LAUNCH_BLOCKING=1\nCompile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.\n').
+Traceback (most recent call last):
+  File "/mnt/home/mondalra/miniforge3/lib/python3.10/site-packages/optuna/study/_optimize.py", line 201, in _run_trial
+    value_or_values = func(trial)
+  File "/mnt/ffs24/home/mondalra/Anomaly_Detection/smd_anomaly_detection/jobs_lrsts/LRSTS.py", line 132, in lrsts_objective
+    lr_sts= SNN__LOGN_GTV(Y, G, lr_modes=[1,2,3,4], graph_modes=[1], gtvr_config=gtvr_config,
+  File "/mnt/ffs24/home/mondalra/Anomaly_Detection/src/models/lr_ssd/snn__logn_gtv.py", line 85, in __init__
+    self.Y = torch.tensor(Y, device=self.device, dtype=self.dtype)
+RuntimeError: CUDA error: invalid device ordinal
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+[W 2025-08-09 20:19:37,297] Trial 0 failed with value None.
+Traceback (most recent call last):
+  File "/mnt/ffs24/home/mondalra/Anomaly_Detection/smd_anomaly_detection/jobs_lrsts/LRSTS.py", line 197, in <module>
+    study.optimize(lrsts_objective, n_trials=500, show_progress_bar=True)
+  File "/mnt/home/mondalra/miniforge3/lib/python3.10/site-packages/optuna/study/study.py", line 489, in optimize
+    _optimize(
+  File "/mnt/home/mondalra/miniforge3/lib/python3.10/site-packages/optuna/study/_optimize.py", line 64, in _optimize
+    _optimize_sequential(
+  File "/mnt/home/mondalra/miniforge3/lib/python3.10/site-packages/optuna/study/_optimize.py", line 161, in _optimize_sequential
+    frozen_trial = _run_trial(study, func, catch)
+  File "/mnt/home/mondalra/miniforge3/lib/python3.10/site-packages/optuna/study/_optimize.py", line 253, in _run_trial
+    raise func_err
+  File "/mnt/home/mondalra/miniforge3/lib/python3.10/site-packages/optuna/study/_optimize.py", line 201, in _run_trial
+    value_or_values = func(trial)
+  File "/mnt/ffs24/home/mondalra/Anomaly_Detection/smd_anomaly_detection/jobs_lrsts/LRSTS.py", line 132, in lrsts_objective
+    lr_sts= SNN__LOGN_GTV(Y, G, lr_modes=[1,2,3,4], graph_modes=[1], gtvr_config=gtvr_config,
+  File "/mnt/ffs24/home/mondalra/Anomaly_Detection/src/models/lr_ssd/snn__logn_gtv.py", line 85, in __init__
+    self.Y = torch.tensor(Y, device=self.device, dtype=self.dtype)
+RuntimeError: CUDA error: invalid device ordinal
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+

@@ -1,0 +1,2 @@
+machine_id,channel_id,raw_f1,likelihood_raw_f1,PA_f1,likelihood_PA_f1,au_roc,likelihood_au_roc
+2,4,0.0,0.3683720930232558,0.0,0.9825986078886311,0.3269206294335973,0.8766077564585489

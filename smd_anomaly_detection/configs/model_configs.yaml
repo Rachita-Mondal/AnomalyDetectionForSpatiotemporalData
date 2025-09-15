@@ -1,0 +1,296 @@
+"HoRPCA":
+  model: "SNN_LOGN_GTV"
+  name: "HoRPCA"
+  lr_modes: [1, 2, 3, 4]
+  graph_modes: [1]
+  graph: 'spatial'
+  grouping: 'neighbor'
+  r_hop: 0
+  weighing: 'size_normalized_inv'
+  err_tol: 0.1
+  max_iter: 2000
+  rho_update: 'domain_parametrization'
+  rho_update_thr: 100
+  verbose: 0
+  lda_gtvs: []
+  gtvr_config: []
+"HoRPCA_f":
+  model: "SNN_LOGN_GTV"
+  name: "HoRPCA_f"
+  lr_modes: [1, 2, 3, 4]
+  graph_modes: [1]
+  graph: 'spatial'
+  grouping: 'neighbor'
+  r_hop: 0
+  soft_constrained: True
+  weighing: 'size_normalized_inv'
+  err_tol: 0.1
+  max_iter: 2000
+  rho_update: 'domain_parametrization'
+  rho_update_thr: 100
+  verbose: 0
+  lda_gtvs: []
+  gtvr_config: []
+  hyperparameters:
+    lda_f: 1.0
+"LR-STS_f":
+  model: "SNN_LOGN_GTV"
+  name: "LR-STS_f"
+  lr_modes: [1, 2, 3, 4]
+  graph_modes: [1]
+  graph: 'spatial'
+  grouping: 'neighbor'
+  r_hop: 0
+  soft_constrained: True
+  weighing: 'size_normalized_inv'
+  err_tol: 0.1
+  max_iter: 2000
+  rho_update: 'domain_parametrization'
+  rho_update_thr: 100
+  verbose: 0
+  lda_gtvs: ~
+  gtvr_config:
+    - graph: 'temporal'
+      mode : [4]
+      p: 1
+      variation_type: GTV
+      normalization: 'none'
+  hyperparameters:
+    lda_f: 1.0
+"LR-STS":
+  model: "SNN_LOGN_GTV"
+  name: "LR-STS"
+  lr_modes: [1, 2, 3, 4]
+  graph_modes: [1]
+  graph: 'spatial'
+  grouping: 'neighbor'
+  r_hop: 0
+  soft_constrained: False
+  weighing: 'size_normalized_inv'
+  err_tol: 0.1
+  max_iter: 2000
+  rho_update: 'domain_parametrization'
+  rho_update_thr: 100
+  verbose: 0
+  lda_gtvs: ~
+  gtvr_config:
+    - graph: 'temporal'
+      mode : [4]
+      p: 1
+      variation_type: GTV
+      normalization: 'none'
+"LR-SSS_f":
+  model: "SNN_LOGN_GTV"
+  name: "LR-SSS_f"
+  lr_modes: [1, 2, 3, 4]
+  graph_modes: [1]
+  graph: 'spatial'
+  grouping: 'neighbor'
+  r_hop: 0
+  soft_constrained: True
+  weighing: 'size_normalized_inv'
+  err_tol: 0.1
+  max_iter: 2000
+  rho_update: 'domain_parametrization'
+  rho_update_thr: 100
+  verbose: 0
+  lda_gtvs: ~
+  gtvr_config:
+    - graph: 'spatial'
+      mode : [1]
+      p: 1
+      variation_type: GTMV
+      normalization: 'none'
+  hyperparameters:
+    lda_f: 1.0
+"LR-SSS":
+  model: "SNN_LOGN_GTV"
+  name: "LR-SSS_f"
+  lr_modes: [1, 2, 3, 4]
+  graph_modes: [1]
+  graph: 'spatial'
+  grouping: 'neighbor'
+  r_hop: 0
+  soft_constrained: False
+  weighing: 'size_normalized_inv'
+  err_tol: 0.1
+  max_iter: 2000
+  rho_update: 'domain_parametrization'
+  rho_update_thr: 100
+  verbose: 0
+  lda_gtvs: ~
+  gtvr_config:
+    - graph: 'spatial'
+      mode : [1]
+      p: 1
+      variation_type: GTMV
+      normalization: 'none'
+  hyperparameters:
+    lda_f: 1.0
+"LR-STSS_f":
+  model: "SNN_LOGN_GTV"
+  name: "LR-STSS_f"
+  lr_modes: [1, 2, 3, 4]
+  graph_modes: [1]
+  graph: 'spatial'
+  grouping: 'neighbor'
+  r_hop: 0
+  soft_constrained: True
+  weighing: 'size_normalized_inv'
+  err_tol: 0.1
+  max_iter: 2000
+  rho_update: 'domain_parametrization'
+  rho_update_thr: 100
+  verbose: 0
+  lda_gtvs: ~
+  gtvr_config:
+    - graph: 'spatial'
+      mode : [1]
+      p: 1
+      variation_type: GTMV
+      normalization: 'none'
+    - graph: 'temporal'
+      mode : [4]
+      p: 1
+      variation_type: GTV
+      normalization: 'none'
+  hyperparameters:
+    lda_f: 1.0
+"LR-STSS":
+  model: "SNN_LOGN_GTV"
+  name: "LR-STSS"
+  lr_modes: [1, 2, 3, 4]
+  graph_modes: [1]
+  graph: 'spatial'
+  grouping: 'neighbor'
+  r_hop: 0
+  soft_constrained: False
+  weighing: 'size_normalized_inv'
+  err_tol: 0.1
+  max_iter: 2000
+  rho_update: 'domain_parametrization'
+  rho_update_thr: 100
+  verbose: 0
+  lda_gtvs: ~
+  gtvr_config:
+    - graph: 'spatial'
+      mode : [1]
+      p: 1
+      variation_type: GTMV
+      normalization: 'none'
+    - graph: 'temporal'
+      mode : [4]
+      p: 1
+      variation_type: GTV
+      normalization: 'none'
+  hyperparameters:
+    lda_f: 1.0
+# "LR-STS":
+  # SNN_L1_GTV_T:
+  #   model: "SNN_LOGN_GTV"
+  #   name: "[SNN]-[L1+GTV(T)]"
+  #   lr_modes: [1, 2, 3]
+  #   graph_modes: [1]
+  #   graph: 'spatial'
+  #   grouping: 'neighbor'
+  #   r_hop: 0
+  #   weighing: 'size_normalized_inv'
+  #   err_tol: 0.1
+  #   max_iter: 200
+  #   rho_update: 'domain_parametrization'
+  #   rho_update_thr: 100
+  #   verbose: 0
+  #   lda_gtvs: [] 
+  #   gtvr_config:
+  #     - graph: 'temporal'
+  #       mode : [3]
+  #       p: 1
+  #       variation_type: GTV
+  # SNN_L1_GTV_ST:
+  #   model: "SNN_LOGN_GTV"
+  #   name: "[SNN]-[L1+GTV(ST)]"
+  #   lr_modes: [1, 2, 3]
+  #   graph_modes: [1,3]
+  #   graph: 'spatio-temporal'
+  #   grouping: 'neighbor'
+  #   r_hop: 0
+  #   weighing: 'size_normalized_inv'
+  #   err_tol: 0.1
+  #   max_iter: 100
+  #   rho_update: 1
+  #   rho_update_thr: 100
+  #   verbose: 0
+  #   lda_gtvs: [] 
+  #   gtvr_config:
+  #     - graph: 'spatial'
+  #       mode : [1,3]
+  #       p: 2
+  #       variation_type: GTV
+  # SNN_LOGN:
+  #   model: "SNN_LOGN_GTV"
+  #   name: "[SNN]-[LOGN(S-N)]"
+  #   lr_modes: [1, 2, 3]
+  #   graph_modes: [1]
+  #   graph: 'spatial'
+  #   grouping: 'neighbor'
+  #   r_hop: 1
+  #   weighing: 'size_normalized_inv'
+  #   err_tol: 0.1
+  #   max_iter: 200
+  #   rho_update: 1
+  #   rho_update_thr: 100
+  #   verbose: 0
+  #   lda_gtvs: []
+  #   gtvr_config: []
+  # SNN_LOGNE:
+  #   model: "SNN_LOGN_GTV"
+  #   name: "[SNN]-[LOGN(T-E)]"
+  #   lr_modes: [1, 2, 3]
+  #   graph_modes: [3]
+  #   graph: 'temporal'
+  #   grouping: 'edge'
+  #   r_hop: 1
+  #   weighing: 'size_normalized_inv'
+  #   err_tol: 0.1
+  #   max_iter: 150
+  #   rho_update: 1
+  #   rho_update_thr: 100
+  #   verbose: 0
+  #   lda_gtvs: []
+  #   gtvr_config: []
+  # SNN_LOGNST:
+  #   model: "SNN_LOGN_GTV"
+  #   name: "[SNN]-[LOGN(ST-N)]"
+  #   lr_modes: [1, 2, 3]
+  #   graph_modes: [1,3]
+  #   graph: 'spatio-temporal'
+  #   grouping: 'neighbor'
+  #   r_hop: 1
+  #   weighing: 'size_normalized_inv'
+  #   err_tol: 0.1
+  #   max_iter: 150
+  #   rho_update: 1
+  #   rho_update_thr: 100
+  #   verbose: 0
+  #   lda_gtvs: []
+  #   gtvr_config: []
+  # SNN_LOGNST_GTV_T:
+  #   model: "SNN_LOGN_GTV"
+  #   name: "[SNN]-[LOGN(ST)+GTV(T)]"
+  #   lr_modes: [1, 2, 3]
+  #   graph_modes: [1,3]
+  #   graph: 'spatio-temporal'
+  #   grouping: 'neighbor'
+  #   r_hop: 1
+  #   weighing: 'size_normalized_inv'
+  #   err_tol: 0.1
+  #   max_iter: 150
+  #   rho_update: 1
+  #   rho_update_thr: 100
+  #   verbose: 0
+  #   lda_gtvs: [] 
+  #   gtvr_config:
+  #     - graph: 'temporal'
+  #       mode : [3]
+  #       p: 1
+  #       variation_type: GTV
